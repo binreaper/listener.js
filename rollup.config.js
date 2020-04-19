@@ -2,16 +2,16 @@ export default {
   input: 'lib/listener.js',
   output: [
   {
-    file: 'lib/listner.cjs.js',
+    file: 'lib/listener.cjs.js',
     format: 'cjs'
   },
   {
-    file: 'lib/listner.browser.js',
+    file: 'lib/listener.global.js',
     name: 'Listener',
-    format: 'iife'
+    format: 'umd'
   },
   {
-    file: 'lib/listner.es.js',
+    file: 'lib/listener.es.js',
     format: 'es'
   }
   ]

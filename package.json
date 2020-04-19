@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/listener.cjs.js",
-  "browser":"lib/listner.browser.js",
+  "browser":"lib/listener.global.js",
+  "es":"lib/listener.es.js",
   "scripts": {
     "bundle": "rollup -c",
     "postinstall":"npm run bundle"
@@ -11,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rollup": "^2.6.1"
+  "rollup": "^2.6.1"
   }
 }
