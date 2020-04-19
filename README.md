@@ -13,7 +13,6 @@ I'm not publishing this on NPM anytime soon so you can go ahead with the github 
 
 ```
 npm i binreaper/listener.js
-
 ```
 
 and here's an example:
@@ -42,7 +41,6 @@ const listener = new Listener();
   decrementButton.addEventListener('click',()=>{
     listener.shout('DEC_COUNT',count);
   });
-
 ```
 
 You can see the above example as a [demo](https://binreaper.github.io/listener.js)
