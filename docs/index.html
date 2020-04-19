@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Listener Example</title>
+  <link rel="stylesheet" href="https://mnmlcss.js.org/mnml.css">
+  <style>
+    :root{
+      --primary-color:#333;
+      --secondary-color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="flex flex-col align-center">
+      <div class="m-md">
+        <p id="count"></p>
+      </div>
+      <div class="m-md">
+          <button id="inc-button">+</button>
+          <button id="dec-button">-</button>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="../lib/listner.browser.js"></script>
+<script>
+  const listener = new Listener();
+  let count = 0;
+
+  listener.listen('INC_COUNT',()=>{
+    document.querySelector('#count').innerHTML = ++count;
+  });
+
+  listener.listen('DEC_COUNT',()=>{
+    document.querySelector('#count').innerHTML = --count;
+  });
+
+  listener.shout('INC_COUNT');
+
+
+  const incrementButton = document.querySelector('#inc-button')
+  incrementButton.addEventListener('click',()=>{
+    listener.shout('INC_COUNT',count);
+  });
+
+  const decrementButton = document.querySelector('#dec-button')
+  decrementButton.addEventListener('click',()=>{
+    listener.shout('DEC_COUNT',count);
+  });
+
+</script>
+
+</html>
