@@ -5,7 +5,8 @@
   "main": "lib/listener.cjs.js",
   "browser":"lib/listner.browser.js",
   "scripts": {
-    "bundle": "rollup -c"
+    "bundle": "rollup -c",
+    "postinstall":"npm run bundle"
   },
   "author": "",
   "license": "ISC",
